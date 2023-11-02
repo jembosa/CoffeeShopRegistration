@@ -17,18 +17,13 @@ namespace CoffeeShopRegistration.Controllers
 
         // Process user registration
         [HttpPost]
-        public IActionResult User()
+        public IActionResult Registration()
         {
-            User a = new User()
-            {
-                fname = "Test",
-                lname = "Test",
-                email = "Test",
-                pass = "Test",
-            }
+            User a = new User();
+            return View(a);
         }
 
-        public IActionResult Register(string fname, string lname, string email, string pass)
+        public IActionResult User(User a)
         {
            
 
@@ -43,12 +38,12 @@ namespace CoffeeShopRegistration.Controllers
                
 
                 // Redirect to the result page and pass the user's first name
-                return View("/views/home/Result.cshtml", User);
+                return base.View(a);
             }
             else
             {
                 // If there are validation errors, return to the registration form
-                return View("/views/home/Registration.cshtml",User);
+                return base.View(a);
             }
         }
     }
