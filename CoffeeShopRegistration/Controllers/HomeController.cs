@@ -12,6 +12,11 @@ namespace CoffeeShopRegistration.Controllers
             return View();
         }
 
+        public IActionResult Result(UserModel user)
+        {
+            return View(user);
+        }
+
         public IActionResult Privacy()
         {
             return View();

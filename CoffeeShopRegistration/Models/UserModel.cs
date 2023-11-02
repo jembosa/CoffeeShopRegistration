@@ -1,7 +1,7 @@
 ﻿
 namespace CoffeeShopRegistration.Models
 {
-    public class User
+    public class UserModel
     {
         public string fname { get; set; }
 
@@ -9,7 +9,7 @@ namespace CoffeeShopRegistration.Models
         public string pass { get; set; }
         public string email { get; set; }
 
-        public User(){}
+        public UserModel(){}
 
     }
 }
